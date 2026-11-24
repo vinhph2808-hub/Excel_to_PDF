@@ -634,15 +634,6 @@ engine_type, engine_desc = get_available_engine()
 
 # --- SIDEBAR: CẤU HÌNH & THÔNG TIN ---
 with st.sidebar:
-    st.markdown("### ⚙️ Trạng Thái Hệ Thống")
-    if engine_type == "excel_com":
-        st.success("🟢 **Động cơ:** Microsoft Excel COM\n\n*Chuẩn in ấn văn phòng gốc, giữ nguyên công thức và đồ họa.*")
-    elif engine_type == "libreoffice":
-        st.info(f"🟡 **Động cơ:** {engine_desc}")
-    else:
-        st.error("🔴 **Cảnh báo:** Chưa tìm thấy Excel COM hoặc LibreOffice để chuyển đổi.")
-
-    st.markdown("---")
     st.markdown("### 📐 Tối Ưu Trang In Chuyên Nghiệp")
     enable_ps = st.checkbox(
         "Bật bộ tối ưu trang in (Khuyên dùng)",
@@ -682,16 +673,6 @@ with st.sidebar:
             index=0,
         )
         page_options["margin_mode"] = "Normal" if "Normal" in margin else ("Narrow" if "Narrow" in margin else "Keep")
-
-    st.markdown("---")
-    st.markdown("### 💡 Mẹo Sử Dụng Trực Tiếp Trên Web")
-    st.info(
-        """
-        - Bạn có thể **kéo thả nhiều file Excel cùng lúc**.
-        - Sau khi chuyển đổi, bạn có thể **xem trực tiếp bản PDF ngay trên web** trước khi tải về.
-        - Chế độ **Nén ZIP** sẽ tự động kích hoạt khi có từ 2 file PDF trở lên.
-        """
-    )
 
 
 # --- NỘI DUNG CHÍNH ---
