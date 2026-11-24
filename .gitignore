@@ -1,0 +1,25 @@
+# Python artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+
+# PyInstaller & Build artifacts
+build/
+dist/
+*.spec
+
+# Large binaries & tunnel tools
+tools/
+*.exe
+
+# Temporary files & logs
+*.log
+*.tmp
+*.zip
+Streamlit_In_*
+Streamlit_PDF_*
